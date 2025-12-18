@@ -888,7 +888,7 @@ textarea {
 }
 
 /* Re-display the Theme Footer when Infinite Scroll has reached its end. */
-.infinity-end.neverending .site-footer {
+.infinity-end.neverending  {
 	display: block;
 }
 
@@ -966,4 +966,45 @@ textarea {
 	margin-left: auto;
 	margin-right: auto;
 	margin-bottom: 1.5em;
+}
+.site-footer{
+	display: block;
+	border-top: 4px solid #f4b828;
+	position: relative;          
+	margin-bottom: 10%;
+}
+.site-footer::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 3%;   
+    right: 3%;     
+    height: 2px;   
+    background-color: #364153;
+}
+.site-info{
+	color: #99a1af;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between; 
+	align-items: flex-start;
+	padding-top: 3%;
+}
+
+.title-footer{
+	color: #eee;
+}
+.info {
+  padding-left: 3%;
+  flex: 1; 
+  min-width: 200px; 
+  max-width: 500px;
+}
+
+.mention{
+	color: #99a1af;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between; 
+	align-items: flex-start;
 }
