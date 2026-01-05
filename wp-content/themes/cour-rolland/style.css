@@ -967,44 +967,383 @@ textarea {
 	margin-right: auto;
 	margin-bottom: 1.5em;
 }
-.site-footer{
-	display: block;
-	border-top: 4px solid #f4b828;
-	position: relative;          
-	margin-bottom: 10%;
-}
-.site-footer::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 3%;   
-    right: 3%;     
-    height: 2px;   
-    background-color: #364153;
-}
-.site-info{
-	color: #99a1af;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between; 
-	align-items: flex-start;
-	padding-top: 3%;
+/* ===================================
+             FOOTER STYLES 
+   =================================== */
+
+.site-footer {
+  color: #ecf0f1;
+  padding: 60px 0 0;
+  margin-top: 80px;
+  border-top: #F4B828;
+  border-bottom: #ffffff;
 }
 
-.title-footer{
-	color: #eee;
-}
-.info {
-  padding-left: 3%;
-  flex: 1; 
-  min-width: 200px; 
-  max-width: 500px;
+/* Container principal */
+.site-info {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px 60px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+
 }
 
-.mention{
-	color: #99a1af;
+/* Titres des sections */
+.title-footer {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.info .title-footer {
+  font-size: 1.5rem;
+}
+
+.info .highlight {
+  color: #F4B828;
+}
+
+/* Description */
+.footer-description,
+.newsletter-description {
+  color: #bdc3c7;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  font-size: 0.95rem;
+}
+
+/* Listes de liens */
+.liens ul,
+.programmes ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.liens li,
+.programmes li {
+  margin-bottom: 12px;
+}
+
+.liens a,
+.programmes a {
+  color: #bdc3c7;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+}
+
+.liens a:hover,
+.programmes a:hover {
+  color: #F4B828;
+}
+
+/* Newsletter */
+.newsletter-form {
+  margin-top: 20px;
+}
+
+.form-group {
+  display: flex;
+  gap: 10px;
+}
+
+.newsletter-form input[type="email"] {
+  flex: 1;
+  padding: 12px 15px;
+  border: 2px solid #34495e;
+  background-color: #34495e;
+  color: #ecf0f1;
+  font-size: 0.95rem;
+  border-radius: 5px;
+}
+
+.newsletter-form input[type="email"]::placeholder {
+  color: #95a5a6;
+}
+
+.newsletter-form input[type="email"]:focus {
+  outline: none;
+  border-color: #F4B828;
+  background-color: #2c3e50;
+}
+
+.btn-newsletter {
+  padding: 12px 30px;
+  background-color: #F4B828;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+}
+
+.btn-newsletter:hover {
+  background-color: #d89e17;
+}
+
+/* Section mentions */
+.mention {
+  background-color: #1a252f;
+  padding: 25px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.mention p {
+  margin: 0;
+  color: #95a5a6;
+  font-size: 0.9rem;
+}
+
+/* Liens légaux */
+.footer-legal {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-legal a {
+  color: #95a5a6;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+.footer-legal a:hover {
+  color: #F4B828;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .site-info {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .site-info {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 0 20px 40px;
+  }
+  
+  .site-footer {
+    padding: 40px 0 0;
+    margin-top: 60px;
+  }
+  
+  .mention {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+  
+  .footer-legal {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .form-group {
+    flex-direction: column;
+  }
+  
+  .btn-newsletter {
+    width: 100%;
+  }
+  
+  .footer-legal {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+
+/** header **/
+/* ===========================
+   HEADER STYLES
+   =========================== */
+
+.site-header {
+	background-color: #1f2830;
+	padding: 0;
+	position: relative;
+}
+
+.header-container {
+	margin: 0 auto;
+	padding: 20px 40px;
 	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between; 
-	align-items: flex-start;
+	justify-content: space-between;
+	align-items: center;
+}
+
+/* Logo / Branding */
+.site-branding {
+	display: flex;
+	align-items: center;
+}
+
+.site-title-link {
+	text-decoration: none;
+	display: flex;
+	flex-direction: column;
+	line-height: 1;
+}
+
+.site-title-ateliers {
+	font-size: 32px;
+	font-weight: 300;
+	color: #F4B828;
+	letter-spacing: 2px;
+}
+
+.site-title-cour {
+	font-size: 16px;
+	font-weight: 400;
+	color: #5bc0be;
+	letter-spacing: 1px;
+	margin-top: 2px;
+}
+
+/* Menu de navigation */
+.nav-menu {
+	margin-left: 10000px;
+	display: flex;
+	gap: 55px;
+	align-items: center;
+	list-style: none;
+	margin-left: 700px;
+	padding: 0;
+}
+
+/* Liens du menu */
+.nav-link {
+	color: #ffffff;
+	text-decoration: none;
+	font-size: 16px;
+	font-weight: 400;
+	transition: color 0.3s ease;
+	white-space: nowrap;
+}
+
+.nav-link:hover {
+	color: #F4B828;
+}
+
+/* Boutons d'action */
+.nav-actions {
+	display: flex;
+	gap: 20px;
+	align-items: center;
+	flex-shrink: 0;
+}
+
+/* Buttons */
+.btn-inscription,
+.btn-connexion {
+	padding: 12px 28px;
+	text-decoration: none;
+	font-size: 16px;
+	font-weight: 500;
+	border-radius: 4px;
+	transition: all 0.3s ease;
+	display: inline-block;
+}
+
+.btn-inscription {
+	background-color: #F4B828;
+	color: #1f2830;
+}
+
+.btn-inscription:hover {
+	background-color:#F4B828;
+	transform: translateY(-2px);
+	box-shadow: 0 4px 8px rgba(212, 165, 116, 0.3);
+}
+
+.btn-connexion {
+	background-color: transparent;
+	color: #F4B828;
+	border: 2px solid #F4B828;
+}
+
+.btn-connexion:hover {
+	background-color: #F4B828;
+	color: #1f2830;
+}
+
+/* Border at bottom */
+.header-border {
+	height: 3px;
+	background: #F4B828;
+}
+
+/* Skip link for accessibility */
+.skip-link {
+	position: absolute;
+	left: -9999px;
+}
+
+.skip-link:focus {
+	left: 0;
+	top: 0;
+	z-index: 9999;
+	background: #F4B828;;
+	color: #1f2830;
+	padding: 10px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+	.header-container {
+		padding: 15px 25px;
+	}
+	
+	.nav-menu {
+		gap: 20px;
+	}
+	
+	.nav-link {
+		font-size: 14px;
+	}
+	
+	.btn-inscription,
+	.btn-connexion {
+		padding: 10px 20px;
+		font-size: 14px;
+	}
+}
+
+@media (max-width: 768px) {
+	.header-container {
+		flex-direction: column;
+		gap: 20px;
+	}
+	
+	.nav-menu {
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 15px;
+	}
+	
+	.site-title-ateliers {
+		font-size: 24px;
+	}
+	
+	.site-title-cour {
+		font-size: 14px;
+	}
 }

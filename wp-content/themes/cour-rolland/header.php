@@ -26,34 +26,21 @@
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'cour-rolland' ); ?></a>
 
 	<header id="masthead" class="site-header">
-		<div class="site-branding">
-			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
-				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php
-			else :
-				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			endif;
-			$cour_rolland_description = get_bloginfo( 'description', 'display' );
-			if ( $cour_rolland_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $cour_rolland_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
-			<?php endif; ?>
-		</div><!-- .site-branding -->
+		<div class="header-container">
+			<div class="site-branding">
+				<p>logo<p>
+			</div>
 
-		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'cour-rolland' ); ?></button>
-			<?php
-			wp_nav_menu(
-				array(
-					'theme_location' => 'menu-1',
-					'menu_id'        => 'primary-menu',
-				)
-			);
-			?>
-		</nav><!-- #site-navigation -->
+			<nav id="site-navigation" class="main-navigation">
+				<div class="nav-menu">
+					<a href="<?php echo esc_url( home_url( '/actualites' ) ); ?>" class="nav-link">Actualités</a>
+					<a href="<?php echo esc_url( home_url( '/programmes' ) ); ?>" class="nav-link">Programmes</a>
+					<a href="<?php echo esc_url( home_url( '/infos' ) ); ?>" class="nav-link">Infos</a>
+					
+					<a href="<?php echo esc_url( home_url( '/inscription' ) ); ?>" class="btn-inscription">Inscription</a>
+					<a href="<?php echo esc_url( home_url( '/connexion' ) ); ?>" class="btn-connexion">Se connecter</a>
+				</div>
+			</nav>
+		</div>
+		<div class="header-border"></div>
 	</header><!-- #masthead -->

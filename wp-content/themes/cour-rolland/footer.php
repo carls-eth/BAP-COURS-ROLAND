@@ -2,50 +2,70 @@
 /**
  * The template for displaying the footer
  *
- * Contains the closing of the #content div and all content after.
- *
- * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
- *
  * @package cour_rolland
  */
 
 ?>
 
 	<footer id="colophon" class="site-footer">
+		<div class="header-border"></div>
 		<div class="site-info">
+			<!-- Section Info -->
 			<div class="info">
-				<h2 class="title-footer">ATELIER DE LA COURROLLAND</h2>
-				<h3>Un espace créatif dédié à l'apprentissage et à la pratique des arts plastiques.</h3>
-				<div class="reseaux">
-
-				</div>
+				<h2 class="title-footer">ATELIER DE LA COUR<span class="highlight">ROLAND</span></h2>
+				<p class="footer-description">Un espace créatif dédié à l'apprentissage et à la pratique des arts plastiques.</p>
 			</div>
+			
+			<!-- Section Liens rapides -->
 			<div class="liens">
 				<h2 class="title-footer">Liens rapides</h2>
-				<h3>Accueil</h3>
-				<h3>À propos</h3>
-				<h3>Nos ateliers</h3>
-				<h3>Galerie</h3>
-				<h3>Contact</h3>
+				<ul>
+					<li><a href="<?php echo esc_url( home_url( '/' ) ); ?>">Accueil</a></li>
+					<li><a href="<?php echo esc_url( home_url( '/a-propos' ) ); ?>">À propos</a></li>
+					<li><a href="<?php echo esc_url( home_url( '/ateliers' ) ); ?>">Nos ateliers</a></li>
+					<li><a href="<?php echo esc_url( home_url( '/galerie' ) ); ?>">Galerie</a></li>
+					<li><a href="<?php echo esc_url( home_url( '/contact' ) ); ?>">Contact</a></li>
+				</ul>
 			</div>
-			<div class="Programmes">
+			
+			<!-- Section Programmes -->
+			<div class="programmes">
 				<h2 class="title-footer">Programmes</h2>
-				<h3>Peinture à l'huile</h3>
-				<h3>Aquarelle</h3>
-				<h3>Dessin</h3>
-				<h3>Acrylique</h3>
-				<h3>Stages intensifs</h3>
+				<ul>
+					<li><a href="#">Peinture à l'huile</a></li>
+					<li><a href="#">Aquarelle</a></li>
+					<li><a href="#">Dessin</a></li>
+					<li><a href="#">Acrylique</a></li>
+					<li><a href="#">Stages intensifs</a></li>
+				</ul>
 			</div>
-			<div class="Newsletter">
+			
+			<!-- Section Newsletter -->
+			<div class="newsletter">
 				<h2 class="title-footer">Newsletter</h2>
-				<h3>Recevez nos actualités et événements</h3>
+				<p class="newsletter-description">Recevez nos actualités et événements</p>
+				<form class="newsletter-form" method="post">
+					<div class="form-group">
+						<input 
+							type="email" 
+							name="newsletter_email" 
+							placeholder="Votre email" 
+							required
+						>
+						<button type="submit" class="btn-newsletter">OK</button>
+					</div>
+				</form>
 			</div>
 		</div><!-- .site-info -->
+		
+		<!-- Section Mentions légales -->
 		<div class="mention">
-			<p>© 2024 Atelier de la Cour Roland. Tous droits réservés.</p>
-			<p>Mentions légales</p>
-			<p>Politique de confidentialité</p>
-			<p>CGV</p>
+			<p class="copyright">© <?php echo date('Y'); ?> Atelier de la Cour Roland. Tous droits réservés.</p>
+			<div class="footer-legal">
+				<a href="<?php echo esc_url( home_url( '/mentions-legales' ) ); ?>">Mentions légales</a>
+				<a href="<?php echo esc_url( home_url( '/politique-confidentialite' ) ); ?>">Politique de confidentialité</a>
+				<a href="<?php echo esc_url( home_url( '/cgv' ) ); ?>">CGV</a>
+			</div>
 		</div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
