@@ -35,7 +35,7 @@
 				<div class="nav-menu">
 					<a href="<?php echo esc_url( home_url( '/actualites' ) ); ?>" class="nav-link">Actualités</a>
 					<a href="<?php echo esc_url( home_url( '/programmes' ) ); ?>" class="nav-link">Programmes</a>
-					<a href="<?php echo esc_url( home_url( '/infos' ) ); ?>" class="nav-link">Infos</a>
+					<a href="<?php echo esc_url( home_url( '/info.php' ) ); ?>" class="nav-link">Infos</a>
 					
 					<a href="<?php echo esc_url( home_url( '/inscription' ) ); ?>" class="btn-inscription">Inscription</a>
 					<a href="<?php echo esc_url( home_url( '/connexion' ) ); ?>" class="btn-connexion">Se connecter</a>
