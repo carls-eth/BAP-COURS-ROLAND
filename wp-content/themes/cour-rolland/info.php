@@ -10,50 +10,20 @@ get_header();
 
 <main id="primary" class="site-main infos-pratiques-page">
     
-    <!-- Hero Section -->
-    <section class="infos-hero">
-        <div class="hero-content">
-            <p class="hero-subtitle">Atelier de la Cour Roland</p>
-            <h1 class="hero-title">Infos <span class="highlight">pratiques</span></h1>
+    <!-- Info Section  -->
+    <section class="infos-info">
+        <div class="info-content">
+            <p class="info-subtitle">Atelier de la Cour Roland</p>
+            <h1 class="info-title">Infos <span class="highlight">pratiques</span></h1>
         </div>
     </section>
 
-    <!-- Contact Form Section -->
+        <!-- Contact Form Section -->
     <section class="contact-section">
         <div class="contact-container">
             <h2 class="contact-title"><span class="highlight">Contactez</span>-nous</h2>
             
-            <form class="contact-form" method="post" action="<?php echo esc_url( admin_url('admin-post.php') ); ?>">
-                <input type="hidden" name="action" value="contact_form_submit">
-                
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="prenom">Prénom</label>
-                        <input type="text" id="prenom" name="prenom" placeholder="Votre prénom" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="nom">Nom</label>
-                        <input type="text" id="nom" name="nom" placeholder="Votre nom" required>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" placeholder="votre@email.com" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="sujet">Sujet</label>
-                    <input type="text" id="sujet" name="sujet" placeholder="" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="message">Votre message</label>
-                    <textarea id="message" name="message" rows="6" placeholder="Écrivez votre message ici..." required></textarea>
-                </div>
-
-                <button type="submit" class="btn-submit">Envoyer le message</button>
-            </form>
+            <?php echo do_shortcode('[contact-form-7 id="123" title="contact"]'); ?>
         </div>
     </section>
 

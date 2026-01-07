@@ -176,3 +176,6 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+add_filter('wp_mail_from', function() {
+    return 'sbs43824@toaik.com';
+});

@@ -965,6 +965,16 @@ textarea {
 	margin-right: auto;
 	margin-bottom: 1.5em;
 }
+@import url('https://fonts.googleapis.com/css2?family=Myriad+Pro:wght@300;400;600;700&display=swap');
+
+/* Import de la police James Stroker pour les titres */
+@font-face {
+    font-family: 'James Stroker';
+    src: url('police/James Stroker.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}	
+
 /* ===================================
              FOOTER STYLES 
    =================================== */
@@ -973,7 +983,7 @@ textarea {
   color: #ecf0f1;
   padding: 60px 0 0;
   margin-top: 80px;
-
+  font-family: 'Myriad Pro', sans-serif;
 }
 
 /* Container principal */
@@ -984,7 +994,6 @@ textarea {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 40px;
-
 }
 
 /* Titres des sections */
@@ -994,6 +1003,7 @@ textarea {
   margin-bottom: 20px;
   color: #fff;
   text-transform: uppercase;
+  font-family: 'James Stroker', serif;
 }
 
 .info .title-footer {
@@ -1177,6 +1187,7 @@ textarea {
 	background-color: #1f2830;
 	padding: 0;
 	position: relative;
+	font-family: 'Myriad Pro', sans-serif;
 }
 
 .header-container {
@@ -1205,6 +1216,7 @@ textarea {
 	font-weight: 300;
 	color: #F4B828;
 	letter-spacing: 2px;
+	font-family: 'James Stroker', serif;
 }
 
 .site-title-cour {
@@ -1345,23 +1357,39 @@ textarea {
 	}
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Myriad+Pro:wght@300;400;600;700&display=swap');
+
+/* Import de la police James Stroker pour les titres */
+@font-face {
+  font-family: 'James Stroker';
+  src: url('https://fonts.cdnfonts.com/css/james-stroker');
+}
+@import url('https://fonts.googleapis.com/css2?family=Myriad+Pro:wght@300;400;600;700&display=swap');
+
+/* Import de la police James Stroker pour les titres */
+@font-face {
+  font-family: 'James Stroker';
+  src: url('https://fonts.cdnfonts.com/css/james-stroker');
+}
+
 /* ===========================
    INFOS PRATIQUES PAGE
    =========================== */
 
 .infos-pratiques-page {
-    background-color: #2a3540;
+    background: linear-gradient(180deg, #2a3540 0%, #1f2830 50%, #6b5a2e 100%);
     min-height: 100vh;
+    font-family: 'Myriad Pro', sans-serif;
 }
 
-/* Hero Section */
-.infos-hero {
-    background: linear-gradient(135deg, #1f2830 0%, #2a3540 100%);
+/* Info Section */
+.infos-info {
+    background: linear-gradient(135deg, #1f2830 0%, #2a3540 50%, #6b5a2e 100%);
     padding: 60px 20px;
     text-align: center;
 }
 
-.hero-subtitle {
+.info-subtitle {
     color: #ffffff;
     font-size: 14px;
     text-transform: uppercase;
@@ -1369,15 +1397,16 @@ textarea {
     margin-bottom: 10px;
 }
 
-.hero-title {
+.info-title {
     color: #ffffff;
-    font-size: 48px;
+    font-size: 64px;
     font-weight: 300;
     margin: 0;
+    font-family: 'James Stroker', serif;
 }
 
-.hero-title .highlight {
-    color: #d4a574;
+.info-title .highlight {
+  	color: #F4B828;
     font-weight: 400;
 }
 
@@ -1400,13 +1429,14 @@ textarea {
 .contact-title {
     text-align: center;
     color: #ffffff;
-    font-size: 36px;
+    font-size: 48px;
     font-weight: 300;
     margin-bottom: 40px;
+    font-family: 'James Stroker', serif;
 }
 
 .contact-title .highlight {
-    color: #d4a574;
+  	color: #F4B828;
 }
 
 /* Contact Form */
@@ -1429,7 +1459,7 @@ textarea {
 }
 
 .form-group label {
-    color: #d4a574;
+  	color: #F4B828;
     font-size: 14px;
     font-weight: 500;
 }
@@ -1448,7 +1478,7 @@ textarea {
 .form-group input:focus,
 .form-group textarea:focus {
     outline: none;
-    border-color: #d4a574;
+    border-color: #F4B828;
     box-shadow: 0 0 0 3px rgba(212, 165, 116, 0.1);
 }
 
@@ -1463,7 +1493,7 @@ textarea {
 }
 
 .btn-submit {
-    background: #d4a574;
+    background:#F4B828;
     color: #1f2830;
     border: none;
     border-radius: 6px;
@@ -1477,7 +1507,7 @@ textarea {
 }
 
 .btn-submit:hover {
-    background: #e5b685;
+    background: #F4B828;
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(212, 165, 116, 0.4);
 }
@@ -1514,7 +1544,7 @@ textarea {
 .card-icon {
     width: 50px;
     height: 50px;
-    background: #d4a574;
+    background: #F4B828;
     border-radius: 10px;
     display: flex;
     align-items: center;
@@ -1523,10 +1553,11 @@ textarea {
 }
 
 .card-header h3 {
-    color: #d4a574;
+    color: #F4B828;
     font-size: 22px;
     font-weight: 500;
     margin: 0;
+    font-family: 'James Stroker', serif;
 }
 
 .card-content {
@@ -1541,7 +1572,7 @@ textarea {
 .address-title,
 .phone-title,
 .transport-label {
-    color: #d4a574;
+    color: #F4B828;
     font-weight: 600;
     margin-top: 20px;
     margin-bottom: 8px;
@@ -1579,11 +1610,11 @@ textarea {
     content: "→";
     position: absolute;
     left: 0;
-    color: #d4a574;
+    color: #F4B828;
 }
 
 .transport-info strong {
-    color: #d4a574;
+    color: #F4B828;
 }
 
 .transport-note {
@@ -1631,6 +1662,7 @@ textarea {
     margin-bottom: 25px;
     padding-bottom: 15px;
     border-bottom: 2px solid rgba(91, 192, 190, 0.3);
+    font-family: 'James Stroker', serif;
 }
 
 .vacation-title {
@@ -1656,7 +1688,7 @@ textarea {
 
 .schedule-item .day,
 .vacation-item .day {
-    color: #d4a574;
+    color: #F4B828;
     font-weight: 600;
 }
 
@@ -1696,7 +1728,7 @@ textarea {
         padding: 30px 20px;
     }
 
-    .hero-title {
+    .info-title {
         font-size: 36px;
     }
 
@@ -1712,16 +1744,15 @@ textarea {
         padding: 20px;
     }
 }
-@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
 
-/* ===== SECTION HERO ===== */
+/* ===== SECTION accueil ===== */
 .accueil-section {
-    background: linear-gradient(135deg, #2c3e50 0%, #1a252f 100%);
+    background: linear-gradient(135deg, #2c3e50 0%, #1a252f 50%, #6b5a2e 100%);
     padding: 100px 20px;
     min-height: 100vh;
     display: flex;
     align-items: center;
-    font-family: 'Libre Baskerville', serif;
+    font-family: 'Myriad Pro', sans-serif;
 }
 
 .accueil-container {
@@ -1749,12 +1780,13 @@ textarea {
 }
 
 .accueil-title {
-    font-size: 90px;
+    font-size: 110px;
     font-weight: 700;
     color: #E8BD4A;
     margin: 0 0 15px 0;
     letter-spacing: 4px;
     line-height: 1;
+    font-family: 'James Stroker', serif;
 }
 
 .accueil-subtitle {
@@ -1884,6 +1916,7 @@ textarea {
     font-weight: 700;
     color: #2c3e50;
     margin: 0 0 12px 0;
+    font-family: 'James Stroker', serif;
 }
 
 .accueil-card-text {
@@ -1906,402 +1939,633 @@ textarea {
     color: #d4a838;
 }
 
-/* ===== SECTION PROGRAMMES ===== */
-.programmes-section {
-    background: linear-gradient(180deg, #1a252f 0%, #2c3e50 100%);
+/* ===========================
+   PAGE ACTUALITÉS
+   =========================== */
+
+.actualites-page {
+    background: linear-gradient(180deg, #2a3e4f 0%, #1f2d3d 50%, #6b5a2e 100%);
+    min-height: 100vh;
+    font-family: 'Myriad Pro', sans-serif;
+}
+
+/* Hero Section */
+.actualites-hero {
+    background: linear-gradient(135deg, rgba(31, 45, 61, 0.9) 0%, rgba(42, 62, 79, 0.8) 50%, rgba(107, 90, 46, 0.8) 100%);
     padding: 100px 20px;
-    font-family: 'Libre Baskerville', serif;
-}
-
-.programmes-container {
-    max-width: 1400px;
-    margin: 0 auto;
     text-align: center;
-}
-
-.programmes-label {
-    font-size: 13px;
-    color: #95a5a6;
-    margin-bottom: 15px;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-}
-
-.programmes-title {
-    font-size: 48px;
-    font-weight: 700;
-    color: #fff;
-    margin: 0 0 20px 0;
-}
-
-.programmes-highlight {
-    color: #E8BD4A;
-}
-
-.programmes-subtitle {
-    font-size: 16px;
-    color: #95a5a6;
-    margin-bottom: 60px;
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.programmes-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    margin-bottom: 50px;
-}
-
-.programme-card {
-    background: #34495e;
-    border-radius: 8px;
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.programme-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-}
-
-.programme-image {
     position: relative;
-    height: 250px;
     overflow: hidden;
 }
 
-.programme-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.programme-badge {
+.actualites-hero::before {
+    content: '';
     position: absolute;
-    top: 15px;
-    left: 15px;
-    background: #E8BD4A;
-    color: #2c3e50;
-    padding: 6px 16px;
-    border-radius: 20px;
-    font-size: 12px;
-    font-weight: 600;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse"><path d="M 100 0 L 0 0 0 100" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="1"/></pattern></defs><rect width="100%" height="100%" fill="url(%23grid)"/></svg>');
+    opacity: 0.5;
 }
 
-.programme-content {
-    padding: 30px;
-    text-align: left;
+.actualites-hero .hero-content {
+    position: relative;
+    z-index: 2;
 }
 
-.programme-title {
-    font-size: 22px;
-    font-weight: 700;
-    color: #fff;
-    margin: 0 0 15px 0;
+.actualites-hero .hero-title {
+    color: #F4B828;
+    font-size: 90px;
+    font-weight: 400;
+    margin: 0 0 20px 0;
+    font-family: 'James Stroker', serif;
 }
 
-.programme-description {
-    font-size: 14px;
-    color: #95a5a6;
+.actualites-hero .hero-description {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 18px;
     line-height: 1.6;
-    margin-bottom: 20px;
+    max-width: 700px;
+    margin: 0 auto;
 }
 
-.programme-info {
-    margin-bottom: 25px;
-}
-
-.programme-duration {
-    font-size: 13px;
-    color: #bdc3c7;
-}
-
-.programme-buttons {
-    display: flex;
-    gap: 12px;
-}
-
-.programme-btn {
-    padding: 10px 24px;
-    text-decoration: none;
-    font-size: 13px;
-    font-weight: 600;
-    border-radius: 30px;
-    transition: all 0.3s ease;
-    display: inline-block;
-    flex: 1;
-    text-align: center;
-}
-
-.programme-btn-primary {
-    background: #E8BD4A;
-    color: #2c3e50;
-}
-
-.programme-btn-primary:hover {
-    background: #d4a838;
-}
-
-.programme-btn-secondary {
+/* Actualités Listing */
+.actualites-listing {
+    padding: 80px 20px;
     background: transparent;
-    color: #fff;
-    border: 2px solid #fff;
-}
-
-.programme-btn-secondary:hover {
-    background: rgba(255, 255, 255, 0.1);
-}
-
-.programmes-cta {
-    text-align: center;
-}
-
-.programmes-btn-all {
-    display: inline-block;
-    padding: 14px 40px;
-    background: transparent;
-    color: #E8BD4A;
-    border: 2px solid #E8BD4A;
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: 600;
-    border-radius: 30px;
-    transition: all 0.3s ease;
-}
-
-.programmes-btn-all:hover {
-    background: #E8BD4A;
-    color: #2c3e50;
-}
-
-/* ===== SECTION ACTUALITÉS ===== */
-.actualites-section {
-    background: #2c3e50;
-    padding: 100px 20px;
-    font-family: 'Libre Baskerville', serif;
 }
 
 .actualites-container {
     max-width: 1400px;
     margin: 0 auto;
-    text-align: center;
-}
-
-.actualites-title {
-    font-size: 48px;
-    font-weight: 700;
-    color: #E8BD4A;
-    margin: 0 0 20px 0;
-}
-
-.actualites-subtitle {
-    font-size: 16px;
-    color: #95a5a6;
-    margin-bottom: 60px;
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.actualites-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 30px;
-    margin-bottom: 50px;
 }
 
+.no-actualites {
+    grid-column: 1 / -1;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 18px;
+    padding: 60px 20px;
+}
+
+/* Actualité Card */
 .actualite-card {
-    background: #34495e;
-    border-radius: 8px;
+    background: rgba(42, 53, 64, 0.6);
+    border-radius: 12px;
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    text-align: left;
 }
 
 .actualite-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    transform: translateY(-8px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
 }
 
 .actualite-image {
     position: relative;
-    height: 220px;
     overflow: hidden;
+    height: 250px;
 }
 
 .actualite-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.actualite-card:hover .actualite-image img {
+    transform: scale(1.1);
 }
 
 .actualite-badge {
     position: absolute;
-    top: 15px;
-    left: 15px;
-    background: #E8BD4A;
-    color: #2c3e50;
-    padding: 6px 16px;
-    border-radius: 20px;
+    top: 20px;
+    left: 20px;
+    padding: 8px 20px;
+    border-radius: 25px;
     font-size: 12px;
     font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
+.badge-evenement {
+    background: #F4B828;
+    color: #1f2830;
+}
+
+.badge-actualite {
+    background: #5bc0be;
+    color: #ffffff;
+}
+
+/* Content */
 .actualite-content {
     padding: 30px;
 }
 
-.actualite-title {
-    font-size: 20px;
-    font-weight: 700;
-    color: #fff;
-    margin: 0 0 15px 0;
+.actualite-date {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #5bc0be;
+    font-size: 14px;
+    margin-bottom: 15px;
+    font-weight: 500;
 }
 
-.actualite-description {
-    font-size: 14px;
-    color: #95a5a6;
+.actualite-date svg {
+    color: #5bc0be;
+    flex-shrink: 0;
+}
+
+.actualite-content h3 {
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: 600;
+    margin: 0 0 15px 0;
+    line-height: 1.3;
+    font-family: 'James Stroker', serif;
+}
+
+.actualite-content p {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 15px;
     line-height: 1.6;
-    margin-bottom: 20px;
+    margin: 0 0 20px 0;
 }
 
 .actualite-link {
-    font-size: 14px;
-    color: #E8BD4A;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #F4B828;
     text-decoration: none;
     font-weight: 600;
-    transition: color 0.3s ease;
-}
-
-.actualite-link:hover {
-    color: #d4a838;
-}
-
-.actualites-cta {
-    text-align: center;
-}
-
-.actualites-btn-all {
-    display: inline-block;
-    padding: 14px 40px;
-    background: transparent;
-    color: #E8BD4A;
-    border: 2px solid #E8BD4A;
-    text-decoration: none;
     font-size: 14px;
-    font-weight: 600;
-    border-radius: 30px;
     transition: all 0.3s ease;
 }
 
-.actualites-btn-all:hover {
-    background: #E8BD4A;
-    color: #2c3e50;
+.actualite-link:hover {
+    gap: 12px;
+    color: #ffc745;
 }
 
-/* ===== RESPONSIVE ===== */
+.actualite-link svg {
+    transition: transform 0.3s ease;
+}
+
+.actualite-link:hover svg {
+    transform: translateX(3px);
+}
+
+/* CTA Section */
+.actualites-cta {
+    padding: 40px 20px 100px;
+}
+
+.cta-container {
+    text-align: center;
+}
+
+.btn-voir-tout {
+    display: inline-block;
+    background: transparent;
+    color: #5bc0be;
+    padding: 16px 40px;
+    border: 2px solid #5bc0be;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.btn-voir-tout:hover {
+    background: #5bc0be;
+    color: #1f2830;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(91, 192, 190, 0.4);
+}
+
+/* Responsive */
 @media (max-width: 1200px) {
-    .accueil-content {
-        gap: 60px;
-    }
-    
-    .accueil-title {
-        font-size: 70px;
+    .actualites-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
     }
 }
 
-@media (max-width: 968px) {
-    .accueil-section {
+@media (max-width: 768px) {
+    .actualites-hero {
         padding: 60px 20px;
     }
-    
-    .accueil-content {
+
+    .actualites-hero .hero-title {
+        font-size: 48px;
+    }
+
+    .actualites-hero .hero-description {
+        font-size: 16px;
+    }
+
+    .actualites-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .actualite-image {
+        height: 200px;
+    }
+
+    .actualite-content {
+        padding: 25px;
+    }
+
+    .actualite-content h3 {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .actualites-hero .hero-title {
+        font-size: 36px;
+    }
+
+    .actualite-image {
+        height: 180px;
+    }
+
+    .actualite-content {
+        padding: 20px;
+    }
+
+    .actualite-content h3 {
+        font-size: 18px;
+    }
+
+    .actualite-content p {
+        font-size: 14px;
+    }
+}
+
+/* ===========================
+   TOUS LES ATELIERS PAGE
+   =========================== */
+
+.tous-ateliers-page {
+    background: linear-gradient(180deg, #374151 0%, #2a3441 50%, #6b5a2e 100%);
+    min-height: 100vh;
+    font-family: 'Myriad Pro', sans-serif;
+}
+
+/* Hero Section */
+.tous-ateliers-hero {
+    background: linear-gradient(135deg, #2a3441 0%, #374151 50%, #6b5a2e 100%);
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.tous-ateliers-hero .hero-title {
+    color: #ffffff;
+    font-size: 64px;
+    font-weight: 300;
+    margin: 0;
+    letter-spacing: 1px;
+    font-family: 'James Stroker', serif;
+}
+
+/* Ateliers Grid Section */
+.ateliers-grid-section {
+    padding: 80px 20px;
+}
+
+.ateliers-grid-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.no-ateliers {
+    grid-column: 1 / -1;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 18px;
+    padding: 60px 20px;
+}
+
+/* Atelier Card */
+.atelier-card {
+    background: #1f2830;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: block;
+}
+
+.atelier-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+}
+
+.atelier-image {
+    position: relative;
+    height: 220px;
+    overflow: hidden;
+}
+
+.atelier-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.atelier-card:hover .atelier-image img {
+    transform: scale(1.1);
+}
+
+.atelier-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(31, 40, 48, 0.95) 0%, transparent 50%, transparent 100%);
+}
+
+.atelier-title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    z-index: 2;
+}
+
+.atelier-title h3 {
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    font-family: 'James Stroker', serif;
+}
+
+/* ===========================
+   AVANTAGES SECTION
+   =========================== */
+
+.avantages-section {
+    background: linear-gradient(180deg, #1f2830 0%, #2a3441 50%, #6b5a2e 100%);
+    padding: 100px 20px;
+    border-top: 3px solid #F4B828;
+}
+
+.avantages-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header */
+.avantages-header {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.avantages-subtitle {
+    color: #5bc0be;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.avantages-title {
+    color: #ffffff;
+    font-size: 64px;
+    font-weight: 300;
+    margin: 0 0 25px 0;
+    font-family: 'James Stroker', serif;
+}
+
+.avantages-description {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 700px;
+    margin: 0 auto 30px;
+}
+
+.title-underline {
+    width: 80px;
+    height: 3px;
+    background: #F4B828;
+    margin: 0 auto;
+}
+
+/* Grid */
+.avantages-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 60px;
+    margin-bottom: 60px;
+}
+
+.avantage-item {
+    text-align: center;
+    position: relative;
+}
+
+/* Lines au dessus */
+.avantage-line {
+    width: 100%;
+    height: 3px;
+    margin-bottom: 40px;
+}
+
+.avantage-line-teal {
+    background: #5bc0be;
+}
+
+.avantage-line-orange {
+    background: #F4B828;
+}
+
+/* Icon */
+.avantage-icon {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 30px;
+    transition: transform 0.3s ease;
+}
+
+.avantage-item:hover .avantage-icon {
+    transform: scale(1.1);
+}
+
+.avantage-icon-teal {
+    background: #5bc0be;
+    color: #ffffff;
+}
+
+.avantage-icon-orange {
+    background: #F4B828;
+    color: #1f2830;
+}
+
+.avantage-icon svg {
+    stroke-width: 1.5;
+}
+
+/* Text */
+.avantage-title {
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: 500;
+    margin: 0 0 20px 0;
+    font-family: 'James Stroker', serif;
+}
+
+.avantage-text {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 15px;
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* CTA */
+.avantages-cta {
+    text-align: center;
+}
+
+.btn-decouvrir {
+    display: inline-block;
+    background: transparent;
+    color: #F4B828;
+    padding: 16px 40px;
+    border: 2px solid #F4B828;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.btn-decouvrir:hover {
+    background: #F4B828;
+    color: #1f2830;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(244, 184, 40, 0.4);
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+    .ateliers-grid-container {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+}
+
+@media (max-width: 992px) {
+    .avantages-grid {
         grid-template-columns: 1fr;
         gap: 50px;
     }
-    
-    .accueil-title {
-        font-size: 60px;
-    }
-    
-    .accueil-card {
-        position: relative;
-        bottom: auto;
-        right: auto;
-        margin-top: 30px;
-        max-width: 100%;
-    }
-    
-    .accueil-description {
-        max-width: 100%;
-    }
-    
-    .programmes-grid {
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    }
-    
-    .actualites-grid {
-        grid-template-columns: 1fr;
+
+    .avantage-line {
+        max-width: 300px;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
-@media (max-width: 576px) {
-    .accueil-section {
-        padding: 40px 15px;
-    }
-    
-    .accueil-title {
-        font-size: 48px;
-        letter-spacing: 2px;
-    }
-    
-    .accueil-subtitle {
-        font-size: 18px;
-    }
-    
-    .accueil-buttons {
-        flex-direction: column;
-        gap: 15px;
-    }
-    
-    .accueil-btn {
-        text-align: center;
-        width: 100%;
-    }
-    
-    .accueil-stats {
-        gap: 30px;
-    }
-    
-    .accueil-stat-number {
-        font-size: 32px;
-    }
-    
-    .accueil-stat-label {
-        font-size: 13px;
-    }
-    
-    .accueil-card {
-        padding: 25px;
-    }
-    
-    .programmes-section,
-    .actualites-section {
-        padding: 60px 15px;
-    }
-    
-    .programmes-title,
-    .actualites-title {
+@media (max-width: 768px) {
+    .tous-ateliers-hero .hero-title {
         font-size: 36px;
     }
-    
-    .programmes-grid {
-        grid-template-columns: 1fr;
+
+    .ateliers-grid-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
     }
-    
-    .programme-buttons {
-        flex-direction: column;
+
+    .atelier-image {
+        height: 180px;
+    }
+
+    .atelier-title h3 {
+        font-size: 16px;
+    }
+
+    .avantages-section {
+        padding: 60px 20px;
+    }
+
+    .avantages-title {
+        font-size: 36px;
+    }
+
+    .avantages-description {
+        font-size: 16px;
+    }
+
+    .avantages-header {
+        margin-bottom: 50px;
+    }
+}
+
+@media (max-width: 480px) {
+    .tous-ateliers-hero .hero-title {
+        font-size: 28px;
+    }
+
+    .ateliers-grid-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .atelier-image {
+        height: 150px;
+    }
+
+    .atelier-title {
+        padding: 15px;
+    }
+
+    .atelier-title h3 {
+        font-size: 14px;
+    }
+
+    .avantages-title {
+        font-size: 28px;
+    }
+
+    .avantage-icon {
+        width: 70px;
+        height: 70px;
+    }
+
+    .avantage-icon svg {
+        width: 30px;
+        height: 30px;
+    }
+
+    .avantage-title {
+        font-size: 20px;
+    }
+
+    .avantage-text {
+        font-size: 14px;
     }
 }
