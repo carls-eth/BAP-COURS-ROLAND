@@ -10,7 +10,6 @@ get_header();
 
 <main id="primary" class="site-main tous-ateliers-page">
     
-    <!-- Hero Section -->
     <section class="tous-ateliers-hero">
         <div class="hero-content">
             <h1 class="hero-title">Tous nos ateliers</h1>

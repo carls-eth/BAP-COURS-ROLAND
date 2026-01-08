@@ -19,24 +19,16 @@ get_header();
         $duree = get_field('duree');
         $participants_max = get_field('participants_max');
         $jour = get_field('jour');
-        $horaire = get_field('horaire'); // Si tu as ce champ
-        $prix = get_field('prix'); // Si tu as ce champ
+        $horaire = get_field('horaire'); 
+        $prix = get_field('prix'); 
         $image = get_field('image_activite');
-        $description = get_field('description'); // Description complète
+        $description = get_field('description'); 
         $description_courte = get_field('description_courte');
-        $materiel = get_field('materiel'); // Liste du matériel si tu l'as
-        $prerequis = get_field('prerequis'); // Prérequis si tu l'as
+
         
-        // Badge class
-        $badge_class = 'badge-debutant';
-        if ($niveau == 'Intermédiaire') {
-            $badge_class = 'badge-intermediaire';
-        } elseif ($niveau == 'Tous niveaux') {
-            $badge_class = 'badge-tous';
-        }
+
     ?>
 
-    <!-- Hero Section -->
     <section class="activite-hero">
         <div class="activite-hero-container">
             <div class="activite-hero-content">
@@ -238,14 +230,17 @@ get_header();
 
                 if ($autres_query->have_posts()) :
                     while ($autres_query->have_posts()) : $autres_query->the_post();
-                        $other_image = get_field('image_activite');
-                        $other_niveau = get_field('niveau');
+                        // Utiliser get_the_ID() pour être sûr d'avoir le bon post
+                        $other_image = get_field('image_activite', get_the_ID());
+                        $other_niveau = get_field('niveau', get_the_ID());
                 ?>
                 
                 <a href="<?php the_permalink(); ?>" class="autre-atelier-card">
                     <div class="autre-atelier-image">
                         <?php if ($other_image) : ?>
                             <img src="<?php echo esc_url($other_image['url']); ?>" alt="<?php the_title(); ?>">
+                        <?php elseif (has_post_thumbnail()) : ?>
+                            <?php the_post_thumbnail('medium'); ?>
                         <?php endif; ?>
                         <?php if ($other_niveau) : ?>
                             <span class="autre-badge"><?php echo esc_html($other_niveau); ?></span>

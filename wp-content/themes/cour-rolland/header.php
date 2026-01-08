@@ -49,4 +49,4 @@
             </nav>
         </div>
         <div class="header-border"></div>
-    </header><!-- #masthead -->
+    </header>

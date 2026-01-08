@@ -53,8 +53,8 @@
 				<a href="<?php echo esc_url( home_url( '/cgv' ) ); ?>">CGV</a>
 			</div>
 		</div>
-	</footer><!-- #colophon -->
-</div><!-- #page -->
+	</footer>
+</div>
 
 <?php wp_footer(); ?>
 

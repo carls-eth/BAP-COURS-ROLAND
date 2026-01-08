@@ -94,11 +94,9 @@ get_header();
         </div>
     </section>
 
-    <!-- Hours and Map Section -->
     <section class="hours-map-section">
         <div class="hours-map-container">
             
-            <!-- Hours Card -->
             <div class="hours-card">
                 <h3 class="hours-title">Horaires d'ouverture</h3>
                 
@@ -150,7 +148,6 @@ get_header();
                 </div>
             </div>
 
-            <!-- Map Card -->
             <div class="map-card">
                 <img src="<?php echo get_template_directory_uri(); ?>/img/ImageWithFallback.png" alt="Carte du monde" class="map-image">
             </div>

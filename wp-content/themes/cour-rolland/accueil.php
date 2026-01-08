@@ -90,14 +90,7 @@ get_header();
                         $jour = get_field('jour');
                         $image = get_field('image_activite');
                         $description = get_field('description_courte');
-                        
-                        // Badge class
-                        $badge_class = 'programme-badge-debutant';
-                        if ($niveau == 'Intermédiaire') {
-                            $badge_class = 'programme-badge-intermediaire';
-                        } elseif ($niveau == 'Tous niveaux') {
-                            $badge_class = 'programme-badge-tous';
-                        }
+
                 ?>
                 
                 <div class="programme-card">
@@ -110,9 +103,6 @@ get_header();
                             <img src="<?php echo get_template_directory_uri(); ?>/images/default-programme.jpg" alt="<?php the_title(); ?>">
                         <?php endif; ?>
                         
-                        <?php if ($niveau) : ?>
-                            <span class="programme-badge <?php echo $badge_class; ?>"><?php echo esc_html($niveau); ?></span>
-                        <?php endif; ?>
                     </div>
                     
                     <div class="programme-content">
@@ -183,7 +173,7 @@ get_header();
     <!-- Section Actualités (3 dernières) -->
     <section class="actualites-section">
         <div class="actualites-container">
-            <h2 class="actualites-title">Actualités</h2>
+            <h2 class="actualites-title">Actualites</h2>
             <p class="actualites-subtitle">Restez informé de nos événements, expositions et nouvelles de l'atelier.</p>
             
             <div class="actualites-grid">
@@ -246,7 +236,7 @@ get_header();
                             <p class="actualite-description"><?php echo wp_trim_words(get_the_excerpt(), 15); ?></p>
                         <?php endif; ?>
                         
-                        <a href="<?php the_permalink(); ?>" class="actualite-link">Lire plus →</a>
+                        <a href="<?php the_permalink(); ?>" class="programme-btn programme-btn-primary">Lire plus</a>
                     </div>
                 </div>
                 

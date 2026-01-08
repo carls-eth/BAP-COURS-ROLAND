@@ -982,7 +982,6 @@ textarea {
 .site-footer {
   color: #ecf0f1;
   padding: 60px 0 0;
-  margin-top: 80px;
   font-family: 'Myriad Pro', sans-serif;
 }
 
@@ -992,7 +991,7 @@ textarea {
   margin: 0 auto;
   padding: 0 20px 60px;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: 2fr 1fr 1fr 1.5fr;
   gap: 40px;
 }
 
@@ -1003,7 +1002,7 @@ textarea {
   margin-bottom: 20px;
   color: #fff;
   text-transform: uppercase;
-  font-family: 'James Stroker', serif;
+  font-family: 'Myriad Pro', sans-serif;
 }
 
 .info .title-footer {
@@ -1042,11 +1041,13 @@ textarea {
   text-decoration: none;
   font-size: 0.95rem;
   transition: color 0.3s ease;
+  display: inline-block;
 }
 
 .liens a:hover,
 .programmes a:hover {
   color: #F4B828;
+  transform: translateX(5px);
 }
 
 /* Newsletter */
@@ -1067,6 +1068,7 @@ textarea {
   color: #ecf0f1;
   font-size: 0.95rem;
   border-radius: 5px;
+  transition: all 0.3s ease;
 }
 
 .newsletter-form input[type="email"]::placeholder {
@@ -1087,24 +1089,28 @@ textarea {
   border-radius: 5px;
   font-weight: 600;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
   font-size: 0.95rem;
   text-transform: uppercase;
+  white-space: nowrap;
 }
 
 .btn-newsletter:hover {
   background-color: #d89e17;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(244, 184, 40, 0.3);
 }
 
 /* Section mentions */
 .mention {
-  background-color: #1a252f;
   padding: 25px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
   gap: 20px;
+
+  border-top: 1px solid #3a3f45; 
 }
 
 .mention p {
@@ -1117,6 +1123,7 @@ textarea {
 .footer-legal {
   display: flex;
   gap: 20px;
+  flex-wrap: wrap;
 }
 
 .footer-legal a {
@@ -1130,55 +1137,236 @@ textarea {
   color: #F4B828;
 }
 
-/* Responsive */
-@media (max-width: 992px) {
+
+
+@media (max-width: 1199px) {
   .site-info {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
+    grid-template-columns: 1.8fr 1fr 1fr 1.4fr;
+    gap: 35px;
+    padding: 0 30px 50px;
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1023px) {
   .site-info {
-    grid-template-columns: 1fr;
-    gap: 30px;
-    padding: 0 20px 40px;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    padding: 0 30px 50px;
   }
   
+  .info {
+    grid-column: 1 / -1;
+    text-align: center;
+  }
+  
+  .info .title-footer {
+    font-size: 1.4rem;
+  }
+  
+  .footer-description {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .liens,
+  .programmes {
+    text-align: left;
+  }
+  
+  .newsletter {
+    grid-column: 1 / -1;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 767px) {
   .site-footer {
-    padding: 40px 0 0;
+    padding: 50px 0 0;
     margin-top: 60px;
+  }
+  
+  .site-info {
+    gap: 35px;
+    padding: 0 25px 45px;
+  }
+  
+  .info {
+    text-align: center;
+  }
+  
+  .info .title-footer {
+    font-size: 1.35rem;
+  }
+  
+  .title-footer {
+    font-size: 1.2rem;
+    margin-bottom: 18px;
+  }
+  
+  .liens,
+  .programmes {
+    text-align: center;
+  }
+  
+  .liens ul,
+  .programmes ul {
+    display: inline-block;
+    text-align: left;
+  }
+  
+  .newsletter {
+    text-align: center;
   }
   
   .mention {
     flex-direction: column;
     text-align: center;
     gap: 15px;
+    padding: 20px;
   }
   
   .footer-legal {
-    flex-wrap: wrap;
     justify-content: center;
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 639px) {
+  .site-footer {
+    padding: 40px 0 0;
+    margin-top: 50px;
+  }
+  
+  .site-info {
+    gap: 30px;
+    padding: 0 20px 40px;
+  }
+  
+  .info .title-footer {
+    font-size: 1.3rem;
+  }
+  
+  .title-footer {
+    font-size: 1.15rem;
+    margin-bottom: 16px;
+  }
+  
+  .footer-description,
+  .newsletter-description {
+    font-size: 0.9rem;
+  }
+  
+  .liens a,
+  .programmes a {
+    font-size: 0.9rem;
+  }
+  
+  .liens,
+  .programmes {
+    padding: 0 10px;
+  }
+  
   .form-group {
     flex-direction: column;
+    gap: 12px;
+  }
+  
+  .newsletter-form input[type="email"] {
+    width: 100%;
+    padding: 14px 15px;
   }
   
   .btn-newsletter {
     width: 100%;
+    padding: 14px;
+  }
+}
+
+@media (max-width: 479px) {
+  .site-footer {
+    padding: 35px 0 0;
+    margin-top: 40px;
+  }
+  
+  .site-info {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    padding: 0 18px 35px;
+  }
+  
+  .liens,
+  .programmes,
+  .newsletter {
+    text-align: center;
+  }
+  
+  .info .title-footer {
+    font-size: 1.25rem;
+  }
+  
+  .title-footer {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+  }
+  
+  .footer-description,
+  .newsletter-description {
+    font-size: 0.88rem;
+    line-height: 1.5;
+  }
+  
+  .liens li,
+  .programmes li {
+    margin-bottom: 10px;
+  }
+  
+  .liens a,
+  .programmes a {
+    font-size: 0.88rem;
+  }
+  
+  .mention {
+    padding: 18px 15px;
+    gap: 12px;
+  }
+  
+  .mention p {
+    font-size: 0.85rem;
+    line-height: 1.4;
   }
   
   .footer-legal {
     flex-direction: column;
     gap: 10px;
+    width: 100%;
+  }
+  
+  .footer-legal a {
+    font-size: 0.85rem;
+    display: block;
   }
 }
 
+@media (max-width: 359px) {
+  .site-info {
+    padding: 0 15px 30px;
+  }
+  
+  .info .title-footer {
+    font-size: 1.2rem;
+  }
+  
+  .title-footer {
+    font-size: 1.05rem;
+  }
+  
+  .newsletter-form input[type="email"],
+  .btn-newsletter {
+    font-size: 0.9rem;
+  }
+}
 
-/** header **/
 /* ===========================
    HEADER STYLES
    =========================== */
@@ -1207,10 +1395,10 @@ textarea {
 
 /* Logo image */
 .site-branding img {
-    height: 80px; /* Taille fixe pour le logo */
-    width: auto; /* Garder les proportions */
-    max-height: 100px; /* Limite maximum */
-    object-fit: contain; /* Garder les proportions */
+    height: 80px;
+    width: auto;
+    max-height: 100px; 
+    object-fit: contain; 
 }
 
 .site-title-link {
@@ -1268,7 +1456,6 @@ textarea {
     flex-shrink: 0;
 }
 
-/* Buttons */
 .btn-inscription,
 .btn-connexion {
     padding: 12px 28px;
@@ -1302,14 +1489,12 @@ textarea {
     color: #1f2830;
 }
 
-/* Border at bottom */
 .header-border {
     height: 3px;
     background: #F4B828;
     width: 100%;
 }
 
-/* Skip link for accessibility */
 .skip-link {
     position: absolute;
     left: -9999px;
@@ -1324,7 +1509,6 @@ textarea {
     padding: 10px;
 }
 
-/* Responsive */
 @media (max-width: 1200px) {
     .nav-menu {
         gap: 35px;
@@ -1351,7 +1535,6 @@ textarea {
         font-size: 15px;
     }
     
-    /* Logo ajusté */
     .site-branding img {
         height: 70px;
     }
@@ -1425,14 +1608,12 @@ textarea {
 
 @import url('https://fonts.googleapis.com/css2?family=Myriad+Pro:wght@300;400;600;700&display=swap');
 
-/* Import de la police James Stroker pour les titres */
 @font-face {
   font-family: 'James Stroker';
   src: url('https://fonts.cdnfonts.com/css/james-stroker');
 }
 @import url('https://fonts.googleapis.com/css2?family=Myriad+Pro:wght@300;400;600;700&display=swap');
 
-/* Import de la police James Stroker pour les titres */
 @font-face {
   font-family: 'James Stroker';
   src: url('https://fonts.cdnfonts.com/css/james-stroker');
@@ -1450,7 +1631,7 @@ textarea {
 
 /* Info Section */
 .infos-info {
-    background: linear-gradient(135deg, #1f2830 0%, #2a3540 50%, #6b5a2e 100%);
+    background: linear-gradient(180deg, #1f2830 0%, #2a3540 50%, #6b5a2e 100%);
     padding: 60px 20px;
     text-align: center;
 }
@@ -1465,7 +1646,7 @@ textarea {
 
 .info-title {
     color: #ffffff;
-    font-size: 64px;
+    font-size: 84px;
     font-weight: 300;
     margin: 0;
     font-family: 'James Stroker', serif;
@@ -1481,6 +1662,8 @@ textarea {
     padding: 60px 20px;
     background: rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(10px);
+    background: linear-gradient(360deg, #1f2830 0%, #2a3540 50%, #6b5a2e 100%);
+
 }
 
 .contact-container {
@@ -1495,7 +1678,7 @@ textarea {
 .contact-title {
     text-align: center;
     color: #ffffff;
-    font-size: 48px;
+    font-size: 68px;
     font-weight: 300;
     margin-bottom: 40px;
     font-family: 'James Stroker', serif;
@@ -1622,7 +1805,7 @@ textarea {
 
 .card-header h3 {
     color: #F4B828;
-    font-size: 22px;
+    font-size: 42px;
     font-weight: 500;
     margin: 0;
     font-family: 'James Stroker', serif;
@@ -1701,7 +1884,6 @@ textarea {
     font-size: 14px;
 }
 
-/* Hours and Map Section */
 .hours-map-section {
     padding: 60px 20px;
 }
@@ -1725,7 +1907,7 @@ textarea {
 .hours-title,
 .vacation-title {
     color: #5bc0be;
-    font-size: 20px;
+    font-size: 40px;
     font-weight: 500;
     margin-bottom: 25px;
     padding-bottom: 15px;
@@ -1779,7 +1961,6 @@ textarea {
     object-fit: cover;
 }
 
-/* Responsive */
 @media (max-width: 1024px) {
     .info-cards-container,
     .hours-map-container {
@@ -1829,12 +2010,9 @@ textarea {
     background-color: #2a3540;
 }
 
-/* ===========================
-   HERO SECTION (ACCUEIL)
-   =========================== */
 
 .accueil-section {
-    background: linear-gradient(135deg, #1f2830 0%, #2a3540 100%);
+    background: linear-gradient(180deg, #2a3e4f 0%, #1f2d3d 50%, #6b5a2e 100%);
     padding: 80px 20px;
 }
 
@@ -1850,7 +2028,6 @@ textarea {
     align-items: center;
 }
 
-/* Left Side */
 .accueil-left {
     color: #ffffff;
 }
@@ -1864,11 +2041,12 @@ textarea {
 }
 
 .accueil-title {
-    color: #d4a574;
+    color: #f4b828;
     font-size: 72px;
     font-weight: 700;
     margin: 0 0 20px 0;
     letter-spacing: 3px;
+	font-family: 'James Stroker', serif;
 }
 
 .accueil-subtitle {
@@ -1901,7 +2079,7 @@ textarea {
 }
 
 .accueil-btn-primary {
-    background: #d4a574;
+    background: #f4b828;
     color: #1f2830;
 }
 
@@ -1913,16 +2091,15 @@ textarea {
 
 .accueil-btn-secondary {
     background: transparent;
-    color: #d4a574;
-    border: 2px solid #d4a574;
+    color: #f4b828;
+    border: 2px solid #f4b828;
 }
 
 .accueil-btn-secondary:hover {
-    background: #d4a574;
+    background: #f4b828;
     color: #1f2830;
 }
 
-/* Stats */
 .accueil-stats {
     display: flex;
     gap: 50px;
@@ -1933,7 +2110,7 @@ textarea {
 }
 
 .accueil-stat-number {
-    color: #d4a574;
+    color: #f4b828;
     font-size: 42px;
     font-weight: 700;
     display: block;
@@ -1946,7 +2123,6 @@ textarea {
     display: block;
 }
 
-/* Right Side */
 .accueil-right {
     position: relative;
 }
@@ -1997,7 +2173,7 @@ textarea {
 }
 
 .accueil-card-link {
-    color: #d4a574;
+    color: #f4b828;
     text-decoration: none;
     font-weight: 600;
     font-size: 14px;
@@ -2008,12 +2184,12 @@ textarea {
 }
 
 /* ===========================
-   SECTION PROGRAMMES (HOME)
+   SECTION PROGRAMMES (accueil)
    =========================== */
 
 .programmes-section {
     padding: 80px 20px;
-    background-color: #2a3540;
+	background: linear-gradient(360deg, #2a3e4f 0%, #1f2d3d 50%, #6b5a2e 100%);
 }
 
 .programmes-container {
@@ -2036,10 +2212,11 @@ textarea {
     font-weight: 300;
     text-align: center;
     margin: 0 0 20px 0;
+	font-family: 'James Stroker', serif;
 }
 
 .programmes-highlight {
-    color: #d4a574;
+    color: #f4b828;
     font-weight: 500;
 }
 
@@ -2100,7 +2277,7 @@ textarea {
 }
 
 .programme-badge-debutant {
-    background: #d4a574;
+    background: #f4b828;
     color: #1f2830;
 }
 
@@ -2146,12 +2323,12 @@ textarea {
     display: flex;
     align-items: center;
     gap: 6px;
-    color: #d4a574;
+    color: #f4b828;
     font-size: 13px;
 }
 
 .programme-meta-item svg {
-    color: #d4a574;
+    color: #f4b828;
     flex-shrink: 0;
 }
 
@@ -2173,7 +2350,7 @@ textarea {
 }
 
 .programme-btn-primary {
-    background: #d4a574;
+    background: #f4b828;
     color: #1f2830;
 }
 
@@ -2188,8 +2365,8 @@ textarea {
 }
 
 .programme-btn-secondary:hover {
-    border-color: #d4a574;
-    color: #d4a574;
+    border-color: #f4b828;
+    color: #f4b828;
 }
 
 .programmes-cta {
@@ -2199,9 +2376,9 @@ textarea {
 .programmes-btn-all {
     display: inline-block;
     background: transparent;
-    color: #d4a574;
+    color: #f4b828;
     padding: 14px 32px;
-    border: 2px solid #d4a574;
+    border: 2px solid #f4b828;
     border-radius: 6px;
     text-decoration: none;
     font-weight: 600;
@@ -2209,18 +2386,18 @@ textarea {
 }
 
 .programmes-btn-all:hover {
-    background: #d4a574;
+    background: #f4b828;
     color: #1f2830;
     transform: translateY(-2px);
 }
 
 /* ===========================
-   SECTION ACTUALITÉS (HOME)
+   SECTION ACTUALITÉS (accueil)
    =========================== */
 
 .actualites-section {
     padding: 80px 20px;
-    background: linear-gradient(180deg, #2a3e4f 0%, #1f2d3d 100%);
+    background: linear-gradient(200deg, #2a3e4f 0%, #1f2d3d 40%, #6b5a2e 100%);
     width: 100%;
 }
 
@@ -2229,14 +2406,13 @@ textarea {
     margin: 0 auto;
 }
 
-/* TITRE PRINCIPAL DE LA SECTION */
 h2.actualites-title {
-    color: #d4a574;
+    color: #f4b828;
     font-size: clamp(40px, 8vw, 72px);
     font-weight: 400;
     text-align: center;
     margin: 0 0 10px 0;
-    font-family: 'Brush Script MT', cursive;
+    font-family: 'James Stroker', serif;
     font-style: italic;
     width: 100%;
 }
@@ -2250,7 +2426,6 @@ h2.actualites-title {
     margin: 0 auto 60px;
 }
 
-/* GRILLE - STYLE PROGRAMMES */
 .actualites-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
@@ -2259,7 +2434,6 @@ h2.actualites-title {
     width: 100%;
 }
 
-/* CARTES - DESIGN COMME LES PROGRAMMES */
 .actualite-card {
     background: transparent;
     border-radius: 12px;
@@ -2307,7 +2481,7 @@ h2.actualites-title {
 }
 
 .actualite-badge-evenement { 
-    background: #d4a574; 
+    background: #f4b828; 
     color: #1f2830; 
 }
 
@@ -2323,7 +2497,6 @@ h2.actualites-title {
     flex-direction: column;
 }
 
-/* TITRE À L'INTÉRIEUR DES CARTES */
 h3.actualite-title {
     color: #ffffff !important;
     font-size: 28px !important;
@@ -2352,7 +2525,6 @@ h3.actualite-title {
     flex-grow: 1;
 }
 
-/* BOUTONS ACTIONS - STYLE PROGRAMMES */
 .actualite-actions {
     display: flex;
     gap: 15px;
@@ -2372,9 +2544,9 @@ h3.actualite-title {
 }
 
 .actualite-link.btn-primary {
-    background: #d4a574;
+    background: #f4b828;
     color: #1f2830;
-    border: 2px solid #d4a574;
+    border: 2px solid #f4b828;
 }
 
 .actualite-link.btn-primary:hover {
@@ -2394,7 +2566,6 @@ h3.actualite-title {
     border-color: rgba(255, 255, 255, 0.5);
 }
 
-/* BOUTON VOIR TOUT */
 .actualites-cta {
     text-align: center;
     width: 100%;
@@ -2419,7 +2590,6 @@ h3.actualite-title {
     transform: translateY(-2px);
 }
 
-/* RESPONSIVE */
 @media (max-width: 1024px) {
     .actualites-grid { 
         grid-template-columns: repeat(2, 1fr); 
@@ -2445,9 +2615,8 @@ h3.actualite-title {
     font-family: 'Myriad Pro', sans-serif;
 }
 
-/* Hero Section */
 .actualites-hero {
-    background: linear-gradient(135deg, rgba(31, 45, 61, 0.9) 0%, rgba(42, 62, 79, 0.8) 50%, rgba(107, 90, 46, 0.8) 100%);
+    background: linear-gradient(180deg, #2a3e4f 0%, #1f2d3d 50%, #6b5a2e 100%);
     padding: 100px 20px;
     text-align: center;
     position: relative;
@@ -2486,13 +2655,12 @@ h3.actualite-title {
     margin: 0 auto;
 }
 
-/* Actualités Listing - PAGE DÉDIÉE */
-.actualites-listing {
+*.actualites-listing {
     padding: 80px 20px;
     background: transparent;
+	background: linear-gradient(360deg, #2a3e4f 0%, #1f2d3d 50%, #6b5a2e 100%);
 }
 
-/* IMPORTANT : Pour la page actualités, on doit réinitialiser le container */
 .actualites-listing .actualites-container {
     max-width: 1400px;
     margin: 0 auto;
@@ -2509,7 +2677,6 @@ h3.actualite-title {
     padding: 60px 20px;
 }
 
-/* Actualité Card - PAGE DÉDIÉE */
 .actualites-listing .actualite-card {
     background: rgba(42, 53, 64, 0.6);
     border-radius: 12px;
@@ -2549,7 +2716,6 @@ h3.actualite-title {
     color: #ffffff;
 }
 
-/* Content - PAGE DÉDIÉE */
 .actualites-listing .actualite-content {
     padding: 30px;
 }
@@ -2609,7 +2775,6 @@ h3.actualite-title {
     transform: translateX(3px);
 }
 
-/* CTA Section */
 .actualites-cta {
     padding: 40px 20px 100px;
 }
@@ -2638,7 +2803,6 @@ h3.actualite-title {
     box-shadow: 0 6px 20px rgba(91, 192, 190, 0.4);
 }
 
-/* Responsive - PAGE DÉDIÉE */
 @media (max-width: 1200px) {
     .actualites-listing .actualites-container {
         grid-template-columns: repeat(2, 1fr);
@@ -2708,15 +2872,14 @@ h3.actualite-title {
     font-family: 'Myriad Pro', sans-serif;
 }
 
-/* Hero Section */
 .tous-ateliers-hero {
-    background: linear-gradient(135deg, #2a3441 0%, #374151 50%, #6b5a2e 100%);
+    background: linear-gradient(180deg, #2a3441 0%, #374151 50%, #6b5a2e 100%);
     padding: 80px 20px;
     text-align: center;
 }
 
 .tous-ateliers-hero .hero-title {
-    color: #ffffff;
+    color: #F4B828;
     font-size: 64px;
     font-weight: 300;
     margin: 0;
@@ -2724,9 +2887,10 @@ h3.actualite-title {
     font-family: 'James Stroker', serif;
 }
 
-/* Ateliers Grid Section */
 .ateliers-grid-section {
     padding: 80px 20px;
+	background: linear-gradient(360deg, #2a3e4f 0%, #1f2d3d 50%, #6b5a2e 100%);
+
 }
 
 .ateliers-grid-container {
@@ -2745,7 +2909,6 @@ h3.actualite-title {
     padding: 60px 20px;
 }
 
-/* Atelier Card */
 .atelier-card {
     background: #1f2830;
     overflow: hidden;
@@ -2820,6 +2983,7 @@ h3.actualite-title {
 .avantages-header {
     text-align: center;
     margin-bottom: 80px;
+	
 }
 
 .avantages-subtitle {
@@ -2832,7 +2996,7 @@ h3.actualite-title {
 }
 
 .avantages-title {
-    color: #ffffff;
+    color: #F4B828;
     font-size: 64px;
     font-weight: 300;
     margin: 0 0 25px 0;
@@ -2867,7 +3031,6 @@ h3.actualite-title {
     position: relative;
 }
 
-/* Lines au dessus */
 .avantage-line {
     width: 100%;
     height: 3px;
@@ -2882,7 +3045,6 @@ h3.actualite-title {
     background: #F4B828;
 }
 
-/* Icon */
 .avantage-icon {
     width: 90px;
     height: 90px;
@@ -2912,7 +3074,6 @@ h3.actualite-title {
     stroke-width: 1.5;
 }
 
-/* Text */
 .avantage-title {
     color: #ffffff;
     font-size: 22px;
@@ -2928,7 +3089,6 @@ h3.actualite-title {
     margin: 0;
 }
 
-/* CTA */
 .avantages-cta {
     text-align: center;
 }
@@ -2953,7 +3113,6 @@ h3.actualite-title {
     box-shadow: 0 6px 20px rgba(244, 184, 40, 0.4);
 }
 
-/* Responsive */
 @media (max-width: 1200px) {
     .ateliers-grid-container {
         grid-template-columns: repeat(3, 1fr);
@@ -3063,7 +3222,6 @@ h3.actualite-title {
     min-height: 100vh;
 }
 
-/* Hero Section */
 .activite-hero {
     background: linear-gradient(135deg, #1f2830 0%, #2a3540 100%);
     padding: 60px 20px 40px;
@@ -3089,7 +3247,7 @@ h3.actualite-title {
 }
 
 .breadcrumb a:hover {
-    color: #d4a574;
+    color: #f4b828;
 }
 
 .breadcrumb .separator {
@@ -3097,7 +3255,7 @@ h3.actualite-title {
 }
 
 .breadcrumb .current {
-    color: #d4a574;
+    color:#f4b828 ;
 }
 
 .activite-badge-hero {
@@ -3111,7 +3269,7 @@ h3.actualite-title {
 }
 
 .activite-badge-hero.badge-debutant {
-    background: #d4a574;
+    background: #f4b828;
     color: #1f2830;
 }
 
@@ -3140,7 +3298,6 @@ h3.actualite-title {
     margin: 0;
 }
 
-/* Content Section */
 .activite-content-section {
     padding: 60px 20px;
 }
@@ -3165,20 +3322,18 @@ h3.actualite-title {
     object-fit: cover;
 }
 
-/* Main Grid */
 .activite-main-grid {
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 60px;
 }
 
-/* Description */
 .activite-description {
     color: #ffffff;
 }
 
 .section-title {
-    color: #d4a574;
+    color: #f4b828;
     font-size: 32px;
     font-weight: 600;
     margin: 0 0 30px 0;
@@ -3213,7 +3368,6 @@ h3.actualite-title {
     line-height: 1.7;
 }
 
-/* Sidebar */
 .activite-sidebar {
     position: sticky;
     top: 100px;
@@ -3261,7 +3415,7 @@ h3.actualite-title {
 }
 
 .info-icon svg {
-    color: #d4a574;
+    color: #f4b828;
 }
 
 .info-details {
@@ -3290,7 +3444,7 @@ h3.actualite-title {
 }
 
 .info-value-price {
-    color: #d4a574;
+    color: #f4b828;
     font-size: 24px;
     font-weight: 700;
 }
@@ -3302,7 +3456,7 @@ h3.actualite-title {
 }
 
 .btn-inscription-full {
-    background: #d4a574;
+    background: #f4b828;
     color: #1f2830;
     padding: 16px 24px;
     border-radius: 8px;
@@ -3339,7 +3493,6 @@ h3.actualite-title {
     color: #5bc0be;
 }
 
-/* Autres ateliers */
 .autres-ateliers-section {
     padding: 80px 20px;
     background: rgba(31, 40, 48, 0.5);
@@ -3400,7 +3553,7 @@ h3.actualite-title {
     position: absolute;
     top: 15px;
     left: 15px;
-    background: #d4a574;
+    background: #f4b828;
     color: #1f2830;
     padding: 6px 14px;
     border-radius: 20px;
@@ -3427,9 +3580,9 @@ h3.actualite-title {
 .btn-voir-tous {
     display: inline-block;
     background: transparent;
-    color: #d4a574;
+    color: #f4b828;
     padding: 14px 32px;
-    border: 2px solid #d4a574;
+    border: 2px solid #f4b828;
     border-radius: 6px;
     text-decoration: none;
     font-weight: 600;
@@ -3437,11 +3590,10 @@ h3.actualite-title {
 }
 
 .btn-voir-tous:hover {
-    background: #d4a574;
+    background: #f4b828;
     color: #1f2830;
 }
 
-/* Responsive */
 @media (max-width: 1024px) {
     .activite-main-grid {
         grid-template-columns: 1fr;
