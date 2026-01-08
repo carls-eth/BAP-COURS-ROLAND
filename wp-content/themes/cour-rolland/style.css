@@ -1539,12 +1539,14 @@ textarea {
     color: #ffffff;
     font-size: 15px;
     transition: all 0.3s ease;
+	padding-right: 52%;
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
     outline: none;
     border-color: #F4B828;
+	color: #ffffff;
     box-shadow: 0 0 0 3px rgba(212, 165, 116, 0.1);
 }
 
@@ -1787,9 +1789,17 @@ textarea {
     .form-row {
         grid-template-columns: 1fr;
     }
+	.form-group input,
+	.form-group textarea {
+		padding-right:50%;
+	}
 }
 
 @media (max-width: 768px) {
+	.form-group input,
+	.form-group textarea {
+		padding-right:15%;
+	}
     .contact-container {
         padding: 30px 20px;
     }
@@ -1948,7 +1958,6 @@ textarea {
 .accueil-image-main {
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
 }
 
 .accueil-image-main img {
@@ -2212,6 +2221,7 @@ textarea {
 .actualites-section {
     padding: 80px 20px;
     background: linear-gradient(180deg, #2a3e4f 0%, #1f2d3d 100%);
+    width: 100%;
 }
 
 .actualites-container {
@@ -2219,14 +2229,16 @@ textarea {
     margin: 0 auto;
 }
 
-.actualites-title {
+/* TITRE PRINCIPAL DE LA SECTION */
+h2.actualites-title {
     color: #d4a574;
-    font-size: 72px;
+    font-size: clamp(40px, 8vw, 72px);
     font-weight: 400;
     text-align: center;
-    margin: 0 0 20px 0;
+    margin: 0 0 10px 0;
     font-family: 'Brush Script MT', cursive;
     font-style: italic;
+    width: 100%;
 }
 
 .actualites-subtitle {
@@ -2238,29 +2250,36 @@ textarea {
     margin: 0 auto 60px;
 }
 
+/* GRILLE - STYLE PROGRAMMES */
 .actualites-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 40px;
     margin-bottom: 50px;
+    width: 100%;
 }
 
+/* CARTES - DESIGN COMME LES PROGRAMMES */
 .actualite-card {
-    background: rgba(42, 53, 64, 0.6);
+    background: transparent;
     border-radius: 12px;
     overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .actualite-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    transform: translateY(-5px);
 }
 
 .actualite-image {
     position: relative;
     overflow: hidden;
-    height: 250px;
+    height: 350px;
+    border-radius: 12px;
+    margin-bottom: 20px;
 }
 
 .actualite-image img {
@@ -2271,181 +2290,148 @@ textarea {
 }
 
 .actualite-card:hover .actualite-image img {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 .actualite-badge {
     position: absolute;
     top: 20px;
-    left: 20px;
-    padding: 8px 20px;
+    right: 20px;
+    padding: 10px 24px;
     border-radius: 25px;
     font-size: 12px;
-    font-weight: 600;
+    font-weight: 700;
     text-transform: uppercase;
+    letter-spacing: 1px;
+    z-index: 2;
 }
 
-.actualite-badge-evenement {
-    background: #d4a574;
-    color: #1f2830;
+.actualite-badge-evenement { 
+    background: #d4a574; 
+    color: #1f2830; 
 }
 
-.actualite-badge-actualite {
-    background: #5bc0be;
-    color: #ffffff;
+.actualite-badge-actualite { 
+    background: #5bc0be; 
+    color: #ffffff; 
 }
 
 .actualite-content {
-    padding: 30px;
+    padding: 0 10px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* TITRE À L'INTÉRIEUR DES CARTES */
+h3.actualite-title {
+    color: #ffffff !important;
+    font-size: 28px !important;
+    font-weight: 600;
+    margin: 0 0 15px 0;
+    line-height: 1.3;
+    font-family: inherit;
+    font-style: normal;
+    text-align: left;
 }
 
 .actualite-date {
     display: flex;
     align-items: center;
     gap: 8px;
-    color: #5bc0be;
+    color: rgba(255, 255, 255, 0.7);
     font-size: 14px;
     margin-bottom: 15px;
-    font-weight: 500;
-}
-
-.actualite-date svg {
-    color: #5bc0be;
-    flex-shrink: 0;
-}
-
-.actualite-title {
-    color: #ffffff;
-    font-size: 22px;
-    font-weight: 600;
-    margin: 0 0 15px 0;
-    line-height: 1.3;
 }
 
 .actualite-description {
-    color: rgba(255, 255, 255, 0.7);
+    color: rgba(255, 255, 255, 0.8);
     font-size: 15px;
     line-height: 1.6;
-    margin: 0 0 20px 0;
+    margin-bottom: 25px;
+    flex-grow: 1;
+}
+
+/* BOUTONS ACTIONS - STYLE PROGRAMMES */
+.actualite-actions {
+    display: flex;
+    gap: 15px;
+    margin-top: auto;
 }
 
 .actualite-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    color: #d4a574;
+    flex: 1;
+    display: inline-block;
+    text-align: center;
+    padding: 14px 28px;
+    border-radius: 6px;
     text-decoration: none;
     font-weight: 600;
     font-size: 14px;
     transition: all 0.3s ease;
 }
 
-.actualite-link:hover {
-    gap: 12px;
-    color: #e5b685;
+.actualite-link.btn-primary {
+    background: #d4a574;
+    color: #1f2830;
+    border: 2px solid #d4a574;
 }
 
+.actualite-link.btn-primary:hover {
+    background: #c89a64;
+    border-color: #c89a64;
+    transform: translateY(-2px);
+}
+
+.actualite-link.btn-secondary {
+    background: transparent;
+    color: rgba(255, 255, 255, 0.9);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.actualite-link.btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+/* BOUTON VOIR TOUT */
 .actualites-cta {
     text-align: center;
+    width: 100%;
+    margin-top: 20px;
 }
 
 .actualites-btn-all {
     display: inline-block;
-    background: transparent;
     color: #5bc0be;
-    padding: 16px 40px;
+    padding: 16px 45px;
     border: 2px solid #5bc0be;
     border-radius: 6px;
     text-decoration: none;
     font-weight: 600;
     font-size: 16px;
-    transition: all 0.3s ease;
+    transition: 0.3s;
 }
 
 .actualites-btn-all:hover {
     background: #5bc0be;
-    color: #1f2830;
+    color: #1f2d3d;
     transform: translateY(-2px);
 }
 
-/* No Content */
-.no-content {
-    grid-column: 1 / -1;
-    text-align: center;
-    color: rgba(255, 255, 255, 0.7);
-    font-size: 18px;
-    padding: 60px 20px;
-}
-
-/* ===========================
-   RESPONSIVE
-   =========================== */
-
-@media (max-width: 1200px) {
-    .accueil-content {
-        grid-template-columns: 1fr;
-        gap: 40px;
-    }
-
-    .accueil-card {
-        position: static;
-        margin-top: 30px;
-        max-width: 100%;
-    }
-
-    .programmes-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .actualites-grid {
-        grid-template-columns: repeat(2, 1fr);
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+    .actualites-grid { 
+        grid-template-columns: repeat(2, 1fr); 
     }
 }
 
 @media (max-width: 768px) {
-    .accueil-title {
-        font-size: 48px;
+    .actualites-grid { 
+        grid-template-columns: 1fr; 
     }
-
-    .accueil-buttons {
-        flex-direction: column;
-    }
-
-    .accueil-stats {
-        gap: 30px;
-    }
-
-    .programmes-title,
-    .actualites-title {
-        font-size: 36px;
-    }
-
-    .actualites-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .programme-buttons {
-        flex-direction: column;
-    }
-}
-
-@media (max-width: 480px) {
-    .accueil-title {
-        font-size: 36px;
-    }
-
-    .programmes-title,
-    .actualites-title {
-        font-size: 28px;
-    }
-
-    .accueil-stat-number {
-        font-size: 32px;
-    }
-
-    .programme-image,
-    .actualite-image {
-        height: 200px;
+    h2.actualites-title { 
+        font-size: 42px; 
     }
 }
 
@@ -2500,13 +2486,14 @@ textarea {
     margin: 0 auto;
 }
 
-/* Actualités Listing */
+/* Actualités Listing - PAGE DÉDIÉE */
 .actualites-listing {
     padding: 80px 20px;
     background: transparent;
 }
 
-.actualites-container {
+/* IMPORTANT : Pour la page actualités, on doit réinitialiser le container */
+.actualites-listing .actualites-container {
     max-width: 1400px;
     margin: 0 auto;
     display: grid;
@@ -2522,46 +2509,34 @@ textarea {
     padding: 60px 20px;
 }
 
-/* Actualité Card */
-.actualite-card {
+/* Actualité Card - PAGE DÉDIÉE */
+.actualites-listing .actualite-card {
     background: rgba(42, 53, 64, 0.6);
     border-radius: 12px;
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.actualite-card:hover {
+.actualites-listing .actualite-card:hover {
     transform: translateY(-8px);
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
 }
 
-.actualite-image {
+.actualites-listing .actualite-image {
     position: relative;
     overflow: hidden;
     height: 250px;
 }
 
-.actualite-image img {
+.actualites-listing .actualite-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: transform 0.5s ease;
 }
 
-.actualite-card:hover .actualite-image img {
+.actualites-listing .actualite-card:hover .actualite-image img {
     transform: scale(1.1);
-}
-
-.actualite-badge {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    padding: 8px 20px;
-    border-radius: 25px;
-    font-size: 12px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
 }
 
 .badge-evenement {
@@ -2574,12 +2549,12 @@ textarea {
     color: #ffffff;
 }
 
-/* Content */
-.actualite-content {
+/* Content - PAGE DÉDIÉE */
+.actualites-listing .actualite-content {
     padding: 30px;
 }
 
-.actualite-date {
+.actualites-listing .actualite-date {
     display: flex;
     align-items: center;
     gap: 8px;
@@ -2589,12 +2564,12 @@ textarea {
     font-weight: 500;
 }
 
-.actualite-date svg {
+.actualites-listing .actualite-date svg {
     color: #5bc0be;
     flex-shrink: 0;
 }
 
-.actualite-content h3 {
+.actualites-listing .actualite-content h3 {
     color: #ffffff;
     font-size: 22px;
     font-weight: 600;
@@ -2603,14 +2578,14 @@ textarea {
     font-family: 'James Stroker', serif;
 }
 
-.actualite-content p {
+.actualites-listing .actualite-content p {
     color: rgba(255, 255, 255, 0.7);
     font-size: 15px;
     line-height: 1.6;
     margin: 0 0 20px 0;
 }
 
-.actualite-link {
+.actualites-listing .actualite-link {
     display: inline-flex;
     align-items: center;
     gap: 8px;
@@ -2621,16 +2596,16 @@ textarea {
     transition: all 0.3s ease;
 }
 
-.actualite-link:hover {
+.actualites-listing .actualite-link:hover {
     gap: 12px;
     color: #ffc745;
 }
 
-.actualite-link svg {
+.actualites-listing .actualite-link svg {
     transition: transform 0.3s ease;
 }
 
-.actualite-link:hover svg {
+.actualites-listing .actualite-link:hover svg {
     transform: translateX(3px);
 }
 
@@ -2663,9 +2638,9 @@ textarea {
     box-shadow: 0 6px 20px rgba(91, 192, 190, 0.4);
 }
 
-/* Responsive */
+/* Responsive - PAGE DÉDIÉE */
 @media (max-width: 1200px) {
-    .actualites-container {
+    .actualites-listing .actualites-container {
         grid-template-columns: repeat(2, 1fr);
         gap: 25px;
     }
@@ -2684,20 +2659,20 @@ textarea {
         font-size: 16px;
     }
 
-    .actualites-container {
+    .actualites-listing .actualites-container {
         grid-template-columns: 1fr;
         gap: 20px;
     }
 
-    .actualite-image {
+    .actualites-listing .actualite-image {
         height: 200px;
     }
 
-    .actualite-content {
+    .actualites-listing .actualite-content {
         padding: 25px;
     }
 
-    .actualite-content h3 {
+    .actualites-listing .actualite-content h3 {
         font-size: 20px;
     }
 }
@@ -2707,23 +2682,22 @@ textarea {
         font-size: 36px;
     }
 
-    .actualite-image {
+    .actualites-listing .actualite-image {
         height: 180px;
     }
 
-    .actualite-content {
+    .actualites-listing .actualite-content {
         padding: 20px;
     }
 
-    .actualite-content h3 {
+    .actualites-listing .actualite-content h3 {
         font-size: 18px;
     }
 
-    .actualite-content p {
+    .actualites-listing .actualite-content p {
         font-size: 14px;
     }
 }
-
 /* ===========================
    TOUS LES ATELIERS PAGE
    =========================== */

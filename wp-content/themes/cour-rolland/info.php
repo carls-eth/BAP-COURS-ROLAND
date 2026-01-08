@@ -152,7 +152,7 @@ get_header();
 
             <!-- Map Card -->
             <div class="map-card">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/map.png" alt="Carte du monde" class="map-image">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/ImageWithFallback.png" alt="Carte du monde" class="map-image">
             </div>
 
         </div>

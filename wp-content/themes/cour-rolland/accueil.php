@@ -47,7 +47,7 @@ get_header();
                 <div class="accueil-right">
                     <div class="accueil-images">
                         <div class="accueil-image-main">
-                            <img src="<?php echo get_template_directory_uri(); ?>/images/hero-brushes.jpg" alt="Pinceaux de peinture">
+                            <img src="<?php echo get_template_directory_uri(); ?>/img/Container.png" alt="Pinceaux de peinture">
                         </div>
                         
                         <div class="accueil-card">

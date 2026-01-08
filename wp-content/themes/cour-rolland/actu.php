@@ -100,12 +100,6 @@ get_header();
         </div>
     </section>
 
-    <!-- CTA Button -->
-    <section class="actualites-cta">
-        <div class="cta-container">
-            <a href="<?php echo esc_url( home_url( '/toutes-les-actualites' ) ); ?>" class="btn-voir-tout">Voir toutes les actualités</a>
-        </div>
-    </section>
 
 </main>
 

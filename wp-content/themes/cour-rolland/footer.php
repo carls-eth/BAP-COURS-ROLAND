@@ -41,21 +41,7 @@
 			</div>
 			
 			<!-- Section Newsletter -->
-			<div class="newsletter">
-				<h2 class="title-footer">Newsletter</h2>
-				<p class="newsletter-description">Recevez nos actualités et événements</p>
-				<form class="newsletter-form" method="post">
-					<div class="form-group">
-						<input 
-							type="email" 
-							name="newsletter_email" 
-							placeholder="Votre email" 
-							required
-						>
-						<button type="submit" class="btn-newsletter">OK</button>
-					</div>
-				</form>
-			</div>
+				<?php echo do_shortcode('[newsletter_form]'); ?>
 		</div><!-- .site-info -->
 		
 		<!-- Section Mentions légales -->
