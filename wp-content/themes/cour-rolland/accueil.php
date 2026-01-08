@@ -104,6 +104,8 @@ get_header();
                     <div class="programme-image">
                         <?php if ($image) : ?>
                             <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>">
+                        <?php elseif (has_post_thumbnail()) : ?>
+                            <?php the_post_thumbnail('large'); ?>
                         <?php else : ?>
                             <img src="<?php echo get_template_directory_uri(); ?>/images/default-programme.jpg" alt="<?php the_title(); ?>">
                         <?php endif; ?>
@@ -214,6 +216,8 @@ get_header();
                     <div class="actualite-image">
                         <?php if ($image) : ?>
                             <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>">
+                        <?php elseif (has_post_thumbnail()) : ?>
+                            <?php the_post_thumbnail('large'); ?>
                         <?php else : ?>
                             <img src="<?php echo get_template_directory_uri(); ?>/images/default-actualite.jpg" alt="<?php the_title(); ?>">
                         <?php endif; ?>
